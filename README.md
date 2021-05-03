@@ -135,8 +135,3 @@ Response Body
   "price": 11.50
 }
 ```
-
-## Resources
-
-- [link 1](example.com)
-- [link 2](example.com)
