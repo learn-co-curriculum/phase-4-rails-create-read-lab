@@ -28,8 +28,8 @@ npm start
 
 This will run your frontend in the browser on port 4000.
 
-To set up your backend, in a new terminal, `cd` into the `plantsy-backend`
-directory and run:
+To set up your backend, in a new terminal, `cd` into the `plantsy-api` directory
+and run:
 
 ```sh
 bundle install
