@@ -6,12 +6,9 @@ RSpec.describe "Plants", type: :request do
     Plant.create(name: 'ZZ Plant', image: './images/zz-plant.jpg', price: '25.98')
   end
 
-  let!(:first_plant) { Plant.first }
-  let!(:second_plant) { Plant.second }
-
   describe "routes" do
     it 'does not create unused routes' do
-      expect { patch "/plants/#{first_plant.id}" }.to raise_error(ActionController::RoutingError)
+      expect { patch "/plants/1" }.to raise_error(ActionController::RoutingError)
     end
   end
 
@@ -28,7 +25,7 @@ RSpec.describe "Plants", type: :request do
 
   describe "GET /plants/:id" do
     it 'returns the first plant' do
-      get "/plants/#{first_plant.id}"
+      get "/plants/#{Plant.first.id}"
 
       expect(response.body).to include_json({
         id: a_kind_of(Integer),
@@ -39,7 +36,7 @@ RSpec.describe "Plants", type: :request do
     end
 
     it 'returns the second plant' do
-      get "/plants/#{second_plant.id}"
+      get "/plants/#{Plant.second.id}"
 
       expect(response.body).to include_json({
         id: a_kind_of(Integer),
