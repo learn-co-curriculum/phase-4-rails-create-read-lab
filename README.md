@@ -45,11 +45,24 @@ interacting with the API from your frontend.
 
 Create a `Plant` model that matches this specification:
 
-| column name | data type |
-| ----------- | --------- |
-| name        | string    |
-| image       | string    |
-| price       | decimal   |
+<table border="1" cellpadding="4" cellspacing="0">
+  <tr>
+    <th>Column Name</th>
+    <th>Data Type</th>
+  </tr>
+  <tr>
+    <td>name</td>
+    <td>string</td>
+  </tr>
+  <tr>
+    <td>image</td>
+    <td>string</td>
+  </tr>
+  <tr>
+    <td>price</td>
+    <td>decimal</td>
+  </tr>
+</table>
 
 After creating the `Plant` model, you can run `rails db:migrate db:seed` to run
 your migration, and run the code in the `db/seeds.rb` file to add some sample
