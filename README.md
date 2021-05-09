@@ -35,9 +35,14 @@ directory and run:
 bundle install
 ```
 
-You can run `learn test` in the `plantsy-api` directory to test the code for
-your deliverables as you go. You're also encouraged to use Postman, and to test
-your backend routes by interacting with the API from your frontend.
+You can run `bundle exec rspec` in the `plantsy-api` directory to test the code
+for your deliverables as you go. You're also encouraged to use Postman, and to
+test your backend routes by interacting with the API from your frontend.
+
+**Note**: due to the folder structure of this lesson, running `learn test` won't
+run the tests. Make sure to `cd` into the `plantsy-api` directory and run
+`bundle exec rspec` to run the tests. When you are ready to submit on Canvas,
+run `learn test` from the root directory.
 
 ## Deliverables
 
