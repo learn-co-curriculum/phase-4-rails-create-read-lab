@@ -35,9 +35,9 @@ directory and run:
 bundle install
 ```
 
-You can run `learn test` to test the code for your deliverables as you go.
-You're also encouraged to use Postman, and to test your backend routes by
-interacting with the API from your frontend.
+You can run `learn test` in the `plantsy-api` directory to test the code for
+your deliverables as you go. You're also encouraged to use Postman, and to test
+your backend routes by interacting with the API from your frontend.
 
 ## Deliverables
 
