@@ -7,37 +7,53 @@
 
 ## Introduction
 
-In this lab, we'll be building an API for a plant store! The code for this is
-separated into two folders:
-
-- `plantsy-api`: our Rails API server
-- `plantsy-frontend`: our React frontend
+In this lab, we'll be building an API for a plant store! In addition to our
+usual Rails code, there is code for a React frontend application in the `client`
+directory.
 
 The code for the frontend application is done. Your job is to create the Rails
 API so that the `fetch` requests on the frontend work successfully.
 
 ## Instructions
 
-To set up and run the frontend, `cd` into the `plantsy-frontend` directory and
-run:
+The React application is in the `client` directory. To set it up, from the root
+directory, run:
 
 ```sh
-npm install
-npm start
+npm install --prefix client
 ```
 
-This will run your frontend in the browser on port 4000.
+Using `--prefix client` will run the npm command within the `client` directory.
 
-To set up your backend, in a new terminal, `cd` into the `plantsy-api` directory
-and run:
+To set up your backend, run:
 
 ```sh
 bundle install
 ```
 
-You can run `learn test` to test the code for your deliverables as you go.
-You're also encouraged to use Postman, and to test your backend routes by
-interacting with the API from your frontend.
+To see how the React application and Rails API are interacting, you can run both
+the Rails application and the React application together by running:
+
+```sh
+rails start
+```
+
+This will run a Rake task that will start both the Rails app and the React app.
+You must use `rails start` (not `rails s`) to start both applications together!
+
+- React: [http://localhost:4000](http://localhost:4000)
+- Rails: [http://localhost:3000](http://localhost:3000)
+
+You will also notice that the `fetch` requests in the frontend don't include
+the backend domain:
+
+```js
+fetch("/plants");
+// instead of fetch("http://localhost:3000/plants")
+```
+
+This is because we are [proxying][create-react-app proxying] these requests to
+our API.
 
 ## Deliverables
 
@@ -45,11 +61,24 @@ interacting with the API from your frontend.
 
 Create a `Plant` model that matches this specification:
 
-| column name | data type |
-| ----------- | --------- |
-| name        | string    |
-| image       | string    |
-| price       | decimal   |
+<table border="1" cellpadding="4" cellspacing="0">
+  <tr>
+    <th>Column Name</th>
+    <th>Data Type</th>
+  </tr>
+  <tr>
+    <td>name</td>
+    <td>string</td>
+  </tr>
+  <tr>
+    <td>image</td>
+    <td>string</td>
+  </tr>
+  <tr>
+    <td>price</td>
+    <td>decimal</td>
+  </tr>
+</table>
 
 After creating the `Plant` model, you can run `rails db:migrate db:seed` to run
 your migration, and run the code in the `db/seeds.rb` file to add some sample
@@ -136,7 +165,4 @@ Response Body
 }
 ```
 
-## Resources
-
-- [link 1](example.com)
-- [link 2](example.com)
+[create-react-app proxying]: https://create-react-app.dev/docs/proxying-api-requests-in-development/
