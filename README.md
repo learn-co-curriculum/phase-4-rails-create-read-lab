@@ -44,8 +44,9 @@ You must use `rails start` (not `rails s`) to start both applications together!
 - React: [http://localhost:4000](http://localhost:4000)
 - Rails: [http://localhost:3000](http://localhost:3000)
 
-You will also notice that the `fetch` requests in the frontend don't include
-the backend domain:
+Take a look through the components in the `client/src/components/` folder to get
+a feel for what our app does. Note that the `fetch` requests in the frontend (in
+`NewPlantForm` and `PlantPage`) don't include the backend domain:
 
 ```js
 fetch("/plants");
@@ -80,17 +81,19 @@ Create a `Plant` model that matches this specification:
   </tr>
 </table>
 
+**If you use a Rails generator, don't forget to pass the `--no-test-framework`
+argument!**
+
 After creating the `Plant` model, you can run `rails db:migrate db:seed` to run
-your migration, and run the code in the `db/seeds.rb` file to add some sample
-data to your database.
+your migration and add some sample data to your database.
 
 Check your progress by running `rails c` and verifying that the plants were
 created successfully!
 
 ### Routes
 
-Your API should have the following routes, which each returns the appropriate
-JSON data:
+Your API should have the following routes as well as the associated controller
+actions that return the appropriate JSON data:
 
 #### Index Route
 
@@ -164,5 +167,8 @@ Response Body
   "price": 11.50
 }
 ```
+
+Once all the tests are passing, start up the React app (using `rails start`) and
+explore the functionality to see how the routes you created are being used.
 
 [create-react-app proxying]: https://create-react-app.dev/docs/proxying-api-requests-in-development/
