@@ -62,24 +62,11 @@ our API.
 
 Create a `Plant` model that matches this specification:
 
-<table border="1" cellpadding="4" cellspacing="0">
-  <tr>
-    <th>Column Name</th>
-    <th>Data Type</th>
-  </tr>
-  <tr>
-    <td>name</td>
-    <td>string</td>
-  </tr>
-  <tr>
-    <td>image</td>
-    <td>string</td>
-  </tr>
-  <tr>
-    <td>price</td>
-    <td>decimal</td>
-  </tr>
-</table>
+| Column Name | Data Type |
+| --- | --- |
+| name | string |
+| image | string |
+| price | decimal |
 
 **If you use a Rails generator, don't forget to pass the `--no-test-framework`
 argument!**
