@@ -19,23 +19,23 @@ API so that the `fetch` requests on the frontend work successfully.
 The React application is in the `client` directory. To set it up, from the root
 directory, run:
 
-```sh
-npm install --prefix client
+```console
+$ npm install --prefix client
 ```
 
 Using `--prefix client` will run the npm command within the `client` directory.
 
 To set up your backend, run:
 
-```sh
-bundle install
+```console
+$ bundle install
 ```
 
 To see how the React application and Rails API are interacting, you can run both
 the Rails application and the React application together by running:
 
-```sh
-rails start
+```console
+$ rails start
 ```
 
 This will run a Rake task that will start both the Rails app and the React app.
@@ -63,10 +63,10 @@ our API.
 Create a `Plant` model that matches this specification:
 
 | Column Name | Data Type |
-| --- | --- |
-| name | string |
-| image | string |
-| price | decimal |
+| ----------- | --------- |
+| name        | string    |
+| image       | string    |
+| price       | decimal   |
 
 **If you use a Rails generator, don't forget to pass the `--no-test-framework`
 argument!**
