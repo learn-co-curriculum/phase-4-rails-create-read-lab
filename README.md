@@ -162,7 +162,7 @@ Response Body
 }
 ```
 
-Once all the tests are passing, start up the React app (using `rails start`) and
-explore the functionality to see how the routes you created are being used.
+Once all the tests are passing, start up the React app and explore the
+functionality to see how the routes you created are being used.
 
 [create-react-app proxying]: https://create-react-app.dev/docs/proxying-api-requests-in-development/
