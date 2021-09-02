@@ -38,11 +38,13 @@ Rails application in one terminal by running:
 $ rails s
 ```
 
-Then, open another terminal and run React:
+Then, [open another terminal][new terminal] and run React:
 
 ```console
 $ npm start --prefix client
 ```
+
+[new terminal]: https://code.visualstudio.com/docs/editor/integrated-terminal#_managing-terminals
 
 Each application will run on its own port on `localhost`:
 
