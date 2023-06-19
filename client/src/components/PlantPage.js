@@ -9,7 +9,7 @@ function PlantPage() {
 
   useEffect(() => {
     // no need to use http://localhost:3000 here
-    fetch("/plants")
+    fetch("http://localhost:3000/plants")
       .then((r) => r.json())
       .then((plantsArray) => {
         setPlants(plantsArray);
