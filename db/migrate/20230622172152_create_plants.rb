@@ -4,6 +4,8 @@ class CreatePlants < ActiveRecord::Migration[6.1]
       t.string :name
       t.string :image
       t.integer :price
+      t.string :controller
+      t.string :plant
 
       t.timestamps
     end
