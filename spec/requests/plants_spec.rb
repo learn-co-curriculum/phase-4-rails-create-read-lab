@@ -29,8 +29,8 @@ RSpec.describe "Plants", type: :request do
 
       expect(response.body).to include_json({
         id: a_kind_of(Integer),
-        name: 'Aloe', 
-        image: './images/aloe.jpg', 
+        name: 'Aloe',
+        image: './images/aloe.jpg',
         price: '15.99'
       })
     end
@@ -40,8 +40,8 @@ RSpec.describe "Plants", type: :request do
 
       expect(response.body).to include_json({
         id: a_kind_of(Integer),
-        name: 'ZZ Plant', 
-        image: './images/zz-plant.jpg', 
+        name: 'ZZ Plant',
+        image: './images/zz-plant.jpg',
         price: '25.98'
       })
     end
@@ -59,8 +59,8 @@ RSpec.describe "Plants", type: :request do
 
       expect(response.body).to include_json({
         id: a_kind_of(Integer),
-        name: 'Pilea peperomioides', 
-        image: './images/pilea.jpg', 
+        name: 'Pilea peperomioides',
+        image: './images/pilea.jpg',
         price: '5.99'
       })
     end
