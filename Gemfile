@@ -2,11 +2,11 @@ source 'https://rubygems.org'
 git_source(:github) { |repo| "https://github.com/#{repo}.git" }
 
 # Ruby 3.3+ compatibility gems
-gem 'logger'
 gem 'bigdecimal' # Will be removed from stdlib in Ruby 3.4
-gem 'ostruct'    # Will be removed from stdlib in Ruby 3.5
-gem 'mutex_m'    # Will be removed from stdlib in Ruby 3.4
 gem 'fiddle'     # Will be removed from stdlib in Ruby 3.5
+gem 'logger'
+gem 'mutex_m'    # Will be removed from stdlib in Ruby 3.4
+gem 'ostruct'    # Will be removed from stdlib in Ruby 3.5
 
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails', branch: 'main'
 gem 'rails', '~> 6.1.3', '>= 6.1.3.2'
@@ -24,18 +24,18 @@ gem 'nio4r', '~> 2.7'
 
 group :development, :test do
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console
-  gem 'byebug', platforms: [:mri, :mingw, :x64_mingw]
+  gem 'byebug', platforms: %i[mri mingw x64_mingw]
   gem 'rspec-rails', '~> 5.0.0'
 end
 
 group :development do
-  gem 'listen', '~> 3.3'
   gem 'foreman', '~> 0.87.2'
+  gem 'listen', '~> 3.3'
   gem 'rubocop'
 end
 
 # Windows does not include zoneinfo files, so bundle the tzinfo-data gem
-gem 'tzinfo-data', platforms: [:mingw, :mswin, :x64_mingw, :jruby]
+gem 'tzinfo-data', platforms: %i[mingw mswin x64_mingw jruby]
 
 group :test do
   gem 'rspec-json_expectations'
