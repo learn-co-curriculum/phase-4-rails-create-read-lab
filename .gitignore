@@ -26,3 +26,11 @@
 
 # Ignore master key for decrypting credentials and more.
 /config/master.key
+
+# .gitignore
+*.log
+node_modules/
+config/secret.json
+Gemfile
+Gemfile.lock
+config/boot.rb
